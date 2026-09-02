@@ -1,0 +1,34 @@
+generated: '2026-09-02'
+method: probed
+source: live GET probes of the named /.well-known/ paths on every host UpEquity controls
+note: >-
+  Every named path was probed and every one returned HTTP 404. The 404 body is the
+  HubSpot CMS not-found page (text/html, ~30KB), not a document — www.upequity.com is a
+  HubSpot-hosted marketing site with no /.well-known/ surface at all. No WellKnown or
+  SecurityTxt pointer is emitted in apis.yml, because a recorded absence is not a
+  presence. UpEquity resolves no api./docs./developers./app./portal. subdomain, so
+  www.upequity.com is the only host there was to probe.
+hosts:
+- host: www.upequity.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+    file: null
+  - path: /.well-known/openid-configuration
+    status: 404
+    file: null
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+    file: null
+  - path: /.well-known/api-catalog
+    status: 404
+    file: null
+  - path: /.well-known/ai-plugin.json
+    status: 404
+    file: null
+  - path: /.well-known/agent-card.json
+    status: 404
+    file: null
+  - path: /.well-known/agent.json
+    status: 404
+    file: null

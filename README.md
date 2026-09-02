@@ -64,5 +64,9 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-UpEquity is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://www.nasdaqprivatemarket.com/
+UpEquity is an Austin, Texas based, veteran-owned proptech mortgage lender and title company founded in 2019 that operates a "Buy Before You Sell" / Trade Up program for homeowners who are purchasing and selling at the same time. It advances the equity trapped in a client's existing home so they can make a non-contingent, effectively all-cash offer on a new home, move once, and sell the old home afterward. It also runs UpEquity Title and originates mortgages directly under NMLS #2101265.
+
+UpEquity publishes **no public API**. Contract discovery on 2026-09-02 probed `/openapi.json`, `/swagger.json`, `/api-docs`, `/graphql` and the full `/.well-known/` path list on `www.upequity.com` — every one returned HTTP 404 — and `api.`, `docs.`, `developers.`, `developer.`, `app.`, `portal.` and `title.upequity.com` do not resolve in DNS. There is no developer portal, SDK, CLI, MCP server or A2A agent card.
+
+- https://www.upequity.com/
+- https://github.com/upequity

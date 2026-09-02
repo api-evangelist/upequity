@@ -1,0 +1,83 @@
+# UpEquity
+
+> UpEquity is an Austin, Texas based, veteran-owned proptech mortgage lender and title
+> company founded in 2019. Its "Buy Before You Sell" / Trade Up program advances the equity
+> trapped in a homeowner's existing house so they can make a non-contingent, effectively
+> all-cash offer on a new home, move once, and sell the old home afterward — with UpEquity
+> making a backup offer on the departing residence. It also operates UpEquity Title and
+> originates mortgages directly under NMLS #2101265.
+
+Generated: 2026-09-02
+Method: generated (from apis.yml and the artifacts in this repository; UpEquity does not
+publish an llms.txt of its own — https://www.upequity.com/llms.txt returned HTTP 404 on
+2026-09-02).
+Source: https://raw.githubusercontent.com/api-evangelist/upequity/refs/heads/main/apis.yml
+Maintained by: API Evangelist (https://apievangelist.com) — this is an independent
+third-party profile, not a document published by UpEquity.
+
+## API surface
+
+UpEquity has no public API. This is a measured finding, not an omission. On 2026-09-02
+contract discovery probed, on every host UpEquity controls:
+
+- `/openapi.json`, `/openapi.yaml`, `/swagger.json`, `/api-docs`, `/graphql` — all HTTP 404
+- the full `/.well-known/` path list (`security.txt`, `openid-configuration`,
+  `oauth-authorization-server`, `api-catalog`, `ai-plugin.json`, `agent-card.json`,
+  `agent.json`) — all HTTP 404, every body the HubSpot CMS not-found page
+- `api.upequity.com`, `docs.upequity.com`, `developers.upequity.com`,
+  `developer.upequity.com`, `app.upequity.com`, `portal.upequity.com`,
+  `title.upequity.com` — none resolve in DNS
+
+There is no developer portal, no API reference, no getting-started guide, no SDK on npm,
+PyPI, RubyGems or any other registry, no CLI, no MCP server, and no A2A agent card.
+The `upequity` GitHub organization (https://github.com/upequity) is verified and real but
+holds only two public repositories, both forks of unrelated third-party projects
+(`serverless-website`, `google-docs-mustaches`), last touched in 2021 and 2022.
+
+Distribution is through real-estate agents and loan officers, not a developer channel.
+Partner integration is a form and a conversation: https://www.upequity.com/partner-with-upequity
+
+## Products
+
+- [Buy Before You Sell / Trade Up](https://www.upequity.com/buy-before-you-sell): equity
+  advance plus a backup offer on the departing residence, so a client can buy first and sell
+  after. No fee schedule is published; the program is apply-only.
+- [UpEquity Title](https://www.upequity.com/title): title services.
+- Direct mortgage origination, NMLS #2101265.
+
+## Eligibility
+
+- Property within 30 miles of a Metropolitan Statistical Area
+- Single-family (1-4 units), PUD or condominium meeting Fannie Mae / Freddie Mac standards
+- C4 condition rating or above, minimal repairs
+- Inspection required
+- Available only in the states UpEquity is licensed in
+- [Eligibility](https://www.upequity.com/eligibility)
+
+## Company
+
+- [Website](https://www.upequity.com/)
+- [Contact](https://www.upequity.com/contact-us) — 1145 West 5th St., Austin, TX 78701, (512) 580-7600
+- [Licensing disclosures](https://www.upequity.com/licensing) — NMLS #2101265, Equal Housing
+  Lender, licensed in AZ, CA, CO, FL, GA, ID, IL, KY, LA, MI, NC, OH, OR, SC, TN, TX and others
+- [Privacy policy](https://www.upequity.com/privacy-policy)
+- [Client login](https://www.upequity.com/login)
+- [Resource library](https://www.upequity.com/trade-up-resources)
+- [Reviews](https://www.upequity.com/reviews)
+- [GitHub organization](https://github.com/upequity)
+
+## Domain security posture (probed 2026-09-02)
+
+- www.upequity.com: HTTPS TLSv1.3, HSTS max-age 31536000
+- upequity.com: DNSSEC enabled; CAA restricts issuance to Let's Encrypt, DigiCert and
+  GoDaddy; SPF present; DMARC present with policy `quarantine`
+- No security.txt, no published vulnerability disclosure policy, no trust center
+
+## Artifacts in this profile
+
+- apis.yml — the APIs.json profile
+- well-known/upequity-well-known.yml — the /.well-known/ probe record (all 404)
+- security/upequity-domain-security.yml — TLS/HSTS/DNSSEC/CAA/SPF/DMARC probe
+- plans/upequity-plans-pricing.yml — no published plans (plan_count 0)
+- rate-limits/upequity-rate-limits.yml — not applicable, no API (limit_count 0)
+- llms/upequity-llms.txt — this file

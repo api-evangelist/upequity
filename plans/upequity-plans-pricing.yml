@@ -1,0 +1,22 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.upequity.com/buy-before-you-sell
+docs: https://www.upequity.com/eligibility
+plan_count: 0
+note: >-
+  UpEquity publishes no plans, tiers, or price list of any kind. It is a consumer
+  mortgage lender and title company, not a subscription software vendor, and it has no
+  API to price. The Trade Up / Buy Before You Sell program page (probed 2026-09-02, HTTP
+  200) states no fee schedule, no program cost, and no rate — it is contact-us / apply-only,
+  routing to https://www.upequity.com/client-form. The only figure published anywhere on
+  the marketing site is the third-party agent commission it does not set ("the Standard
+  Commission typically is 6% but is negotiated between you and your agent"), which is not
+  an UpEquity price. Recorded as an honest zero rather than omitted.
+plans: []
+evidence:
+- url: https://www.upequity.com/buy-before-you-sell
+  status: 200
+  finding: program page, no fee schedule or pricing stated
+- url: https://www.upequity.com/eligibility
+  status: 200
+  finding: eligibility criteria only, no pricing

@@ -1,0 +1,20 @@
+generated: '2026-09-02'
+method: searched
+source: https://www.upequity.com/
+limit_count: 0
+applicable: false
+note: >-
+  Not applicable rather than undocumented: UpEquity publishes no API, so there is no
+  runtime surface to rate limit and no response headers to record. Contract discovery on
+  2026-09-02 probed /openapi.json, /swagger.json, /api-docs, /graphql and the full
+  /.well-known/ path list on www.upequity.com (the only host that resolves) and every one
+  returned 404; api., docs., developers., developer., app., portal. and title.upequity.com
+  do not resolve in DNS. Recorded as an honest zero so the absence is data rather than a
+  gap.
+rate_limits: []
+evidence:
+- url: https://www.upequity.com/openapi.json
+  status: 404
+- url: https://api.upequity.com/
+  status: 0
+  finding: DNS NXDOMAIN — host does not resolve
